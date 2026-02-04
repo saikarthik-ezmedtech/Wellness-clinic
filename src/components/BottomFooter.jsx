@@ -24,28 +24,22 @@ const BottomFooter = () => {
                         </div>
                         <p className="text-gray-700 mt-2 sm:mt-0">
                             Digital Marketing by{' '}
-                            <a
-                                href="https://www.threewolf.co/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="hover:opacity-70 transition-opacity inline-flex items-center gap-1"
+                            <span
+                                className="inline-flex items-center gap-1 opacity-70"
                             >
                                 Three Wolf
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-2.5 h-2.5 sm:w-3 sm:h-3">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"></path>
                                 </svg>
-                            </a>
+                            </span>
                         </p>
                     </div>
 
                     {/* Right - Social Media Icons */}
                     <ul className="flex items-center gap-3 sm:gap-4">
                         <li>
-                            <motion.a
-                                href="https://www.facebook.com/RegenMDwellness/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="block w-9 h-9 sm:w-10 sm:h-10 text-gray-700 hover:text-[#ADA77C] transition-colors"
+                            <motion.div
+                                className="block w-9 h-9 sm:w-10 sm:h-10 text-gray-700 hover:text-[#ADA77C] transition-colors cursor-pointer"
                                 aria-label="Facebook"
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
@@ -59,14 +53,11 @@ const BottomFooter = () => {
                                     h4.21c0.19,0,0.44-1.59,0.74-4.78v-0.29H26.5c-0.19,0-0.29-0.1-0.29-0.29v-3.5c0-1.49,0.87-2.31,2.62-2.47h2.9v-4.35
                                     c0-0.29-1.01-0.43-3.04-0.43h-0.74c-3.35,0-5.53,1.25-6.54,3.76C21.22,14.41,21.03,15.19,20.84,16.22z"/>
                                 </svg>
-                            </motion.a>
+                            </motion.div>
                         </li>
                         <li>
-                            <motion.a
-                                href="https://www.instagram.com/regenmdwellness_/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="block w-9 h-9 sm:w-10 sm:h-10 text-gray-700 hover:text-[#ADA77C] transition-colors"
+                            <motion.div
+                                className="block w-9 h-9 sm:w-10 sm:h-10 text-gray-700 hover:text-[#ADA77C] transition-colors cursor-pointer"
                                 aria-label="Instagram"
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
@@ -85,14 +76,11 @@ const BottomFooter = () => {
                                     M30.35,18.81c0.42,0.94,0.94,1.41,1.57,1.41c0.63,0,1.15-0.47,1.55-1.41c-0.22-1.14-0.79-1.71-1.71-1.71
                                     C30.82,17.39,30.35,17.96,30.35,18.81z"/>
                                 </svg>
-                            </motion.a>
+                            </motion.div>
                         </li>
                         <li>
-                            <motion.a
-                                href="https://www.tiktok.com/@regenmd_"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="block w-9 h-9 sm:w-10 sm:h-10 text-gray-700 hover:text-[#ADA77C] transition-colors"
+                            <motion.div
+                                className="block w-9 h-9 sm:w-10 sm:h-10 text-gray-700 hover:text-[#ADA77C] transition-colors cursor-pointer"
                                 aria-label="TikTok"
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
@@ -112,7 +100,7 @@ const BottomFooter = () => {
                                     c0.17,0,0.17,0,0.17,0.17c0,0.38,0.16,1.28,0.17,1.35c0.71,3.61,4.92,5.82,6.22,6.02c0.36,0.05,0.72,0.10,1.08,0.09
                                     c0.15,0,0.16,0,0.15,0.15c0,0.34,0.07,3.79,0.06,5.05C38.96,22.15,38.92,22.16,38.63,22.16z"/>
                                 </svg>
-                            </motion.a>
+                            </motion.div>
                         </li>
                     </ul>
                 </div>

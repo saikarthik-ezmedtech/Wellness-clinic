@@ -4,17 +4,15 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
     return (
-        <div className="relative w-full overflow-hidden" style={{
-            height: '100vh',
-            minHeight: '650px',
-            backgroundColor: '#f9f9f9'
-        }}>
+        <div className="relative w-full h-[calc(100vh-100px)] overflow-hidden bg-[#f9f9f9]">
             {/* Static Image Background - extends behind navbar and announcement */}
             <div className="absolute inset-0 z-0">
                 <img
                     src="/assets/pexels-ketut-subiyanto-5037355 2.svg"
                     alt="Wellness Background"
                     className="w-full h-full object-cover object-center"
+                    loading="eager"
+                    fetchpriority="high"
                 />
                 {/* Overlay for text readability */}
                 <div className="absolute inset-0 bg-black/20"></div>
@@ -22,8 +20,8 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
             </div>
 
-            {/* Content - positioned with padding from top to account for navbar */}
-            <div className="relative z-10 flex items-center justify-center h-full px-4 pt-[92px]">
+            {/* Content - centered within the hero area */}
+            <div className="relative z-10 flex items-center justify-center h-full px-4">
                 <div className="max-w-5xl mx-auto text-center">
 
                     <motion.h1
@@ -50,9 +48,9 @@ const Hero = () => {
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="flex flex-col sm:flex-row items-center justify-center gap-5"
                     >
-                        <button className="bg-[#ADA77C] hover:bg-[#9C966C] text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest transition-all transform hover:scale-105 shadow-xl min-w-[200px] border border-transparent hover:border-white/20">
-                            Self-care quiz
-                        </button>
+                        <a href="/quiz" className="bg-[#ADA77C] hover:bg-[#9C966C] text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest transition-all transform hover:scale-105 shadow-xl min-w-[200px] border border-transparent hover:border-white/20 flex items-center justify-center">
+                            Self-Care Quiz
+                        </a>
                         <button className="bg-[#2D2D2D]/90 backdrop-blur-md hover:bg-black text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest transition-all transform hover:scale-105 shadow-xl min-w-[200px]">
                             Book Consultation
                         </button>

@@ -70,7 +70,7 @@ const FooterLinks = () => {
                             <a href="/peptides" className="text-sm sm:text-base lg:text-lg text-gray-900 hover:opacity-70 transition-opacity">Peptides</a>
                             <a href="/services" className="text-sm sm:text-base lg:text-lg text-gray-900 hover:opacity-70 transition-opacity">Services</a>
                             <a href="/memberships" className="text-sm sm:text-base lg:text-lg text-gray-900 hover:opacity-70 transition-opacity">Memberships</a>
-                            <a href="/#quiz" className="text-sm sm:text-base lg:text-lg text-gray-900 hover:opacity-70 transition-opacity">Wellness Quiz</a>
+                            <a href="/quiz" className="text-sm sm:text-base lg:text-lg text-gray-900 hover:opacity-70 transition-opacity">Self-Care Quiz</a>
                             <a href="/refill-request" className="text-sm sm:text-base lg:text-lg text-gray-900 hover:opacity-70 transition-opacity">Refill</a>
                         </div>
                     </motion.div>
