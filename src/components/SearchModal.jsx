@@ -8,12 +8,12 @@ const SearchModal = ({ isOpen, onClose }) => {
     const inputRef = useRef(null);
 
     const popularPeptides = [
-        { name: 'Compounded GLP-1', path: '/products/tirzepatide-semaglutide' },
-        { name: 'Define Stack', path: '/products/define-stack' },
-        { name: 'NAD+', path: '/products/nad' },
-        { name: 'EmpowerHer Blend', path: '/products/empowerher-blend' },
-        { name: 'Fat Burner Blend', path: '/products/fat-burner-blend' },
-        { name: 'Recovery Blend', path: '/products/recovery-blend' }
+        { name: 'Compounded GLP-1', path: '/services' },
+        { name: 'Define Stack', path: '/services' },
+        { name: 'NAD+', path: '/services' },
+        { name: 'EmpowerHer Blend', path: '/services' },
+        { name: 'Fat Burner Blend', path: '/services' },
+        { name: 'Recovery Blend', path: '/services' }
     ];
 
     useEffect(() => {
