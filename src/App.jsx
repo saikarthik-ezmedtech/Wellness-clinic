@@ -32,6 +32,10 @@ const Layout = () => {
     return () => document.removeEventListener('click', handleAnchorClick);
   }, [navigate]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <div className={`min-h-screen font-sans text-gray-900 ${isQuizPage ? '' : 'pt-[100px] md:pt-[100px]'}`} style={{ backgroundColor: '#f9f9f9' }}>
       {!isQuizPage && <AnnouncementBar />}
