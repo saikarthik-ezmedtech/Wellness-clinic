@@ -49,11 +49,17 @@ const Navbar = ({ isQuizPage = false }) => {
 
     return (
         <>
-            <nav className={`fixed w-full z-[100] shadow-sm border-b transition-all duration-500  
-                ${isScrolled ? 'bg-white border-gray-100' : 'bg-white/95 backdrop-blur-md border-white/20'} 
+            <nav className={`fixed w-full z-[100] transition-all duration-500 ease-in-out
+                ${isScrolled
+                    ? 'bg-white/80 backdrop-blur-xl border-b border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)]'
+                    : 'bg-white/95 backdrop-blur-md border-b border-white/20'} 
                 ${isVisible || isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'}
                 ${isQuizPage ? 'top-0' : (!isMobileMenuOpen && isVisible ? 'top-9' : 'top-0')}
                 `}>
+                {/* Accent line for scrolled state */}
+                {isScrolled && (
+                    <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#ADA77C]/40 to-transparent"></div>
+                )}
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="flex justify-between items-center h-16">
 
@@ -170,7 +176,7 @@ const Navbar = ({ isQuizPage = false }) => {
                                 <Search size={22} className="group-hover:scale-110 transition-transform stroke-[1.5]" />
                                 <span>Search</span>
                             </button>
-                            <a href="/quiz" className="hidden lg:block bg-[#ADA77C] hover:bg-[#9C966C] text-white px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all transform hover:scale-105 shadow-md whitespace-nowrap">
+                            <a href="/quiz" className="hidden lg:block bg-gradient-to-r from-[#ADA77C] to-[#9C966C] hover:from-[#9C966C] hover:to-[#8B855B] text-white px-7 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest transition-all transform hover:scale-105 shadow-[0_8px_15px_-5px_rgba(173,167,124,0.4)] hover:shadow-[0_12px_20px_-5px_rgba(173,167,124,0.5)] whitespace-nowrap">
                                 Self-Care Quiz
                             </a>
 
@@ -279,10 +285,10 @@ const Navbar = ({ isQuizPage = false }) => {
 
                         {/* Bottom CTA for Mobile */}
                         <div className="mt-auto pt-10 flex flex-col gap-4">
-                            <a href="/quiz" onClick={() => setIsMobileMenuOpen(false)} className="w-full bg-[#ADA77C] text-white text-center py-4 rounded-full font-bold uppercase tracking-widest shadow-lg">
+                            <a href="/quiz" onClick={() => setIsMobileMenuOpen(false)} className="w-full bg-gradient-to-r from-[#ADA77C] to-[#9C966C] text-white text-center py-4 rounded-full font-bold uppercase tracking-widest shadow-lg active:scale-95 transition-transform">
                                 Take Self-Care Quiz
                             </a>
-                            <a href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="w-full bg-gray-900 text-white text-center py-4 rounded-full font-bold uppercase tracking-widest shadow-lg">
+                            <a href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="w-full bg-[#1A1A1A] text-white text-center py-4 rounded-full font-bold uppercase tracking-widest shadow-lg active:scale-95 transition-transform">
                                 Book A Consultation
                             </a>
                         </div>

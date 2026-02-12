@@ -61,30 +61,30 @@ const FloatingCTA = () => {
                     {/* Book Now Button */}
                     <motion.a
                         href="/contact"
-                        className="group flex items-center justify-center gap-3 bg-gradient-to-r from-[#ADA77C] to-[#C4BE8A] hover:from-[#9C966C] hover:to-[#ADA77C] text-white px-6 py-3 rounded-full shadow-lg transition-all w-[200px]"
+                        className="group flex items-center justify-center gap-3 bg-gradient-to-r from-[#9C966C] to-[#8B855B] hover:scale-105 text-white px-6 py-4 rounded-full shadow-[0_10px_25px_-5px_rgba(156,150,108,0.4)] transition-all w-[210px]"
                         aria-label="Book Now"
-                        whileHover={{ scale: 1.02, translateY: -2 }}
-                        whileTap={{ scale: 0.98 }}
+                        whileHover={{ scale: 1.05, translateY: -5 }}
+                        whileTap={{ scale: 0.95 }}
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5 flex-shrink-0">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5 flex-shrink-0 text-white/80">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                         </svg>
-                        <span className="font-bold uppercase tracking-wide text-sm font-mono">Book Now</span>
+                        <span className="font-extrabold uppercase tracking-[0.15em] text-[10px] md:text-xs">Book Now</span>
                     </motion.a>
 
                     {/* Wellness Quiz Button (hidden on product pages) */}
                     {showQuiz && (
                         <motion.a
                             href="/quiz"
-                            className="group flex items-center justify-center gap-3 bg-gradient-to-r from-[#ADA77C] to-[#C4BE8A] hover:from-[#9C966C] hover:to-[#ADA77C] text-white px-6 py-3 rounded-full shadow-lg transition-all w-[200px]"
+                            className="group flex items-center justify-center gap-3 bg-gradient-to-r from-[#ADA77C] to-[#9C966C] hover:scale-105 text-white px-6 py-4 rounded-full shadow-[0_15px_30px_-10px_rgba(173,167,124,0.4)] transition-all w-[210px]"
                             aria-label="Self-Care Quiz"
-                            whileHover={{ scale: 1.02, translateY: -2 }}
-                            whileTap={{ scale: 0.98 }}
+                            whileHover={{ scale: 1.05, translateY: -5 }}
+                            whileTap={{ scale: 0.95 }}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5 flex-shrink-0">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75"></path>
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 012-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
                             </svg>
-                            <span className="font-bold uppercase tracking-wide text-sm font-mono">Self-Care Quiz</span>
+                            <span className="font-extrabold uppercase tracking-[0.15em] text-[10px] md:text-xs drop-shadow-sm">Self-Care Quiz</span>
                         </motion.a>
                     )}
                 </motion.div>

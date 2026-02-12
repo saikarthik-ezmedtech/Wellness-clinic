@@ -23,9 +23,9 @@ const AnnouncementBar = () => {
     }, [lastScrollY]);
 
     return (
-        <div className={`fixed top-0 left-0 w-full h-9 z-[60] bg-[#ADA77C]/95 backdrop-blur-sm text-center flex items-center justify-center px-4 cursor-pointer hover:bg-[#969066]/95 transition-all duration-500 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
-            <p className="text-white text-[10px] md:text-xs font-bold tracking-widest uppercase">
-                Reset & Recalibrate <span className="font-normal opacity-90 ml-2">See January Specials →</span>
+        <div className={`fixed top-0 left-0 w-full h-9 z-[60] bg-gradient-to-r from-[#ADA77C] via-[#B8B28B] to-[#ADA77C] backdrop-blur-sm text-center flex items-center justify-center px-4 cursor-pointer hover:brightness-110 transition-all duration-500 border-b border-white/10 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+            <p className="text-white text-[10px] md:text-xs font-extrabold tracking-[0.2em] uppercase drop-shadow-sm">
+                Reset & Recalibrate <span className="font-medium opacity-90 ml-3 border-l border-white/30 pl-3">Explore February Specials →</span>
             </p>
         </div>
     );

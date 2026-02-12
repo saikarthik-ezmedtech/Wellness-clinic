@@ -8,33 +8,33 @@ const MembershipCTA = () => {
                     {/* Background Image */}
                     <div className="absolute inset-0">
                         <img
-                            src="/assets/image 25.svg"
+                            src="/assets/membership_cta_bg.png"
                             alt="Membership Background"
                             className="w-full h-full object-cover"
                         />
                         {/* Overlay */}
-                        <div className="absolute inset-0 bg-black/50 md:bg-black/0 md:hover:bg-black/30 transition-all duration-300"></div>
+                        <div className="absolute inset-0 bg-black/50 md:bg-black/40 md:hover:bg-black/50 transition-all duration-300"></div>
                     </div>
 
                     {/* Content */}
-                    <div className="relative z-10 w-full max-w-2xl mx-auto">
-                        <div className="text-[10px] md:text-sm font-semibold text-white/90 uppercase tracking-[0.2em] mb-4">
+                    <div className="relative z-10 w-full max-w-4xl mx-auto">
+                        <div className="text-[10px] md:text-sm font-semibold text-white/90 uppercase tracking-[0.2em] mb-4 drop-shadow-md">
                             Simplify & Save
                         </div>
 
-                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-[1.1] tracking-tight">
+                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-[1.1] tracking-tight whitespace-nowrap drop-shadow-xl">
                             .Memberships Designed for You
                         </h2>
 
-                        <p className="text-base md:text-xl text-white/95 mb-10 max-w-lg mx-auto leading-relaxed">
-                            Flexible plans starting from just <strong className="text-[#ADA77C]">$99 per month.*</strong>
+                        <p className="text-base md:text-xl text-white/95 mb-10 max-w-lg mx-auto leading-relaxed drop-shadow-lg">
+                            Flexible plans starting from just <strong className="text-[#ADA77C] bg-black/20 px-2 py-0.5 rounded backdrop-blur-sm">$99 per month.*</strong>
                         </p>
 
                         <a
                             href="/memberships"
                             className="inline-block bg-white hover:bg-gray-100 text-gray-900 px-10 py-4 rounded-full text-xs md:text-sm font-bold uppercase tracking-widest transition-all transform hover:scale-105 shadow-2xl"
                         >
-                            Learn More
+                            FIND YOUR PEPTIDE
                         </a>
                     </div>
                 </div>

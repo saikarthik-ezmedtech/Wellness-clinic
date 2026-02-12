@@ -24,11 +24,11 @@ const features = [
 const ScrollingFeatures = () => {
     return (
         <div className="w-full bg-[#75714B] py-12 overflow-hidden">
-            <div className="relative h-[170px] flex flex-col gap-8">
+            <div className="relative h-[170px] flex flex-col items-center justify-center gap-8">
                 {/* First Row - Scrolling Left */}
-                <div className="relative h-[50px] overflow-hidden">
+                <div className="relative w-full h-[50px] flex items-center overflow-hidden">
                     <div
-                        className="absolute flex gap-6 animate-scroll-left"
+                        className="flex gap-6 animate-scroll-left"
                         style={{
                             maskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
                             WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)'
@@ -68,9 +68,9 @@ const ScrollingFeatures = () => {
                 </div>
 
                 {/* Second Row - Scrolling Right */}
-                <div className="relative h-[50px] overflow-hidden">
+                <div className="relative w-full h-[50px] flex items-center overflow-hidden">
                     <div
-                        className="absolute flex gap-6 animate-scroll-right"
+                        className="flex gap-6 animate-scroll-right"
                         style={{
                             maskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
                             WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)'

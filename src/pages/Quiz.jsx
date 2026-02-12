@@ -427,7 +427,7 @@ const Quiz = () => {
                                 >
                                     <div className="inline-block">
                                         <img
-                                            src="/assets/regenmd_her.png"
+                                            src="/assets/regenmd_her_transparent.png"
                                             alt="REGENMD for Her"
                                             className="w-56 h-56 mx-auto mb-4 object-contain"
                                         />

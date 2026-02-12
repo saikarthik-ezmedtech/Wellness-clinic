@@ -1,65 +1,70 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import MissionSection from '../components/MissionSection';
 import MembershipCTA from '../components/MembershipCTA';
 import WellnessCTA from '../components/WellnessCTA';
 
 const Services = () => {
+    const { scrollY } = useScroll();
+    const y1 = useTransform(scrollY, [0, 500], [0, 200]);
+    const scale = useTransform(scrollY, [0, 500], [1, 1.1]);
+
     const services = [
         {
             subheading: "Balance & Boost",
             title: "Peptide Therapy",
             link: "/pages/peptides",
-            hoverColor: "#f6f8f5",
+            hoverColor: "#f4f3ed", // Subtle olive cream
             image: "/assets/regenmd_weightloss_transparent.png"
         },
         {
             subheading: "Smooth & Sculpt",
             title: "Injectables & Aesthetics",
             link: "/pages/injectables",
-            hoverColor: "#fbf2e8",
+            hoverColor: "#f4f3ed",
             image: "/assets/regenmd_antiaging_transparent.png"
         },
         {
             subheading: "Refine & Glow",
             title: "Skincare Treatments",
             link: "/pages/skincare",
-            hoverColor: "#f2f2f7",
+            hoverColor: "#f4f3ed",
             image: "/assets/regenmd_her_transparent.png"
         },
         {
             subheading: "Rebalance & Revive",
             title: "Hormone Replacement",
             link: "/pages/hormone-replacement-therapy",
-            hoverColor: "#efeff5",
+            hoverColor: "#f4f3ed",
             image: "/assets/regenmd_him_transparent.png"
         },
         {
             subheading: "Strengthen & Reclaim",
             title: "Testosterone Replacement",
             link: "/pages/testosterone-replacement-therapy",
-            hoverColor: "#f5f5f7",
+            hoverColor: "#f4f3ed",
             image: "/assets/regenmd_him_transparent.png"
         },
         {
             subheading: "Repair & Regenerate",
             title: "Platelet-Rich Plasma",
             link: "/pages/platelet-rich-plasma-therapy",
-            hoverColor: "#fafafa",
-            image: "/assets/wecare_strength_syringe.png"
+            hoverColor: "#f4f3ed",
+            image: "/assets/wecare_strength_syringe_transparent.png"
         },
         {
             subheading: "Evaluate & Verify",
             title: "Lab Panels",
             link: "/pages/lab-panels",
-            hoverColor: "#f0f2f0",
-            image: "/assets/wecare_anti_aging_vial.png"
+            hoverColor: "#f4f3ed",
+            image: "/assets/wecare_anti_aging_vial_transparent.png"
         },
         {
             subheading: "Hydrate & Replenish",
             title: "IV Therapy",
             link: "/pages/iv-therapy",
-            hoverColor: "#f9f9f9",
+            hoverColor: "#f4f3ed",
             image: "/assets/regenmd_strength_transparent.png"
         }
     ];
@@ -105,8 +110,8 @@ const Services = () => {
                     font-size: 0.9rem;
                     text-transform: uppercase;
                     letter-spacing: 0.2em;
-                    color: #666;
-                    font-weight: 600;
+                    color: #ADA77C;
+                    font-weight: 700;
                     margin-bottom: 5px;
                     display: block;
                 }
@@ -125,11 +130,11 @@ const Services = () => {
                 .typewriter-title {
                     font-size: 4rem;
                     font-weight: 800;
-                    color: #000;
+                    color: #1A1A1A;
                     letter-spacing: -0.02em;
                     display: inline-block;
                     margin: 0;
-                    border-right: 4px solid #000;
+                    border-right: 4px solid #ADA77C;
                     padding-right: 8px;
                     animation: caret 1s steps(1) infinite;
                     min-width: 500px;
@@ -173,21 +178,25 @@ const Services = () => {
                 .service-title {
                     font-size: 2.2rem;
                     font-weight: 400;
-                    color: #000;
+                    color: #1A1A1A;
                     margin-bottom: 28px;
                     line-height: 1.2;
                 }
                 .explore-btn {
                     display: inline-block;
                     padding: 14px 34px;
-                    background: #000;
+                    background: #1A1A1A;
                     color: #fff;
                     border-radius: 100px;
                     font-size: 0.85rem;
                     font-weight: 700;
                     text-transform: uppercase;
-                    letter-spacing: 0.05em;
+                    letter-spacing: 0.15em;
                     transition: all 0.3s ease;
+                }
+                .service-media-card:hover .explore-btn {
+                    background: #ADA77C;
+                    transform: scale(1.05);
                 }
                 .service-product-image {
                     position: absolute;
@@ -230,20 +239,36 @@ const Services = () => {
 
             {/* Hero Section */}
             <div className="relative w-full h-[calc(100vh-100px)] overflow-hidden">
-                <img
-                    src="/assets/helena-lopes-e3OUQGT9bWU-unsplash.jpg"
-                    alt="Services Background"
-                    className="absolute inset-0 w-full h-full object-cover object-center"
-                />
-                <div className="absolute inset-0 bg-black/10"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                <motion.div
+                    style={{ y: y1, scale }}
+                    className="absolute inset-0 z-0 h-[120%]"
+                >
+                    <img
+                        src="/assets/services_hero_bg.png"
+                        alt="Services Background"
+                        className="w-full h-full object-cover object-center"
+                    />
+                    <div className="absolute inset-0 bg-black/20"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                </motion.div>
+
                 <div className="relative z-10 h-full max-w-7xl mx-auto px-6 flex flex-col justify-center">
-                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
-                        .Services
-                    </h1>
-                    <p className="text-lg md:text-xl text-white/95 max-w-xl font-medium drop-shadow-md">
-                        Explore Our Complete Range of Services & Treatments
-                    </p>
+                    <motion.h1
+                        initial={{ opacity: 0, x: -30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="text-4xl md:text-6xl font-extrabold text-white mb-4 drop-shadow-xl tracking-tight"
+                    >
+                        .SERVICES
+                    </motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0, x: -30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="text-lg md:text-xl text-white/95 max-w-xl font-medium drop-shadow-lg"
+                    >
+                        Explore Our Complete Range of Specialized Treatments
+                    </motion.p>
                 </div>
             </div>
 

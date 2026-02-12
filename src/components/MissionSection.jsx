@@ -106,30 +106,33 @@ const MissionSection = () => {
             <div className="mission-container">
                 <div className="simple-media-list">
                     {/* Mission Card */}
-                    <div className="simple-media-card">
+                    <div className="simple-media-card group">
                         <img
-                            src="/assets/mission_bg.png"
-                            alt="Mission background"
-                            className="card-bg"
+                            src="/assets/mission_abstract_gradient.png"
+                            alt="Our Mission"
+                            className="card-bg transition-transform duration-1000 group-hover:scale-110"
                         />
-                        <div className="card-overlay" style={{ background: 'rgba(255, 255, 255, 0.4)' }}></div>
-                        <div className="card-content">
-                            <p className="mission-text">
+                        <div className="card-overlay" style={{ background: 'rgba(0, 0, 0, 0.4)', backdropFilter: 'blur(4px)' }}></div>
+                        <div className="card-content relative z-10 px-8">
+                            <p className="mission-text text-white font-semibold leading-relaxed drop-shadow-xl">
                                 We believe that feeling good is for everyone, and our mission is to provide accessible and personalized wellness solutions that empower individuals to achieve their optimal state of physical and mental well-being.
                             </p>
                         </div>
                     </div>
 
                     {/* Image Card */}
-                    <div className="simple-media-card">
+                    <div className="simple-media-card group">
                         <img
-                            src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1600"
-                            alt="Wellness woman"
-                            className="card-bg"
+                            src="/assets/book_now_bg_v2.png"
+                            alt="Wellness Consultation"
+                            className="card-bg transition-transform duration-1000 group-hover:scale-110"
                         />
-                        <div className="card-overlay" style={{ background: 'rgba(0,0,0,0.2)' }}></div>
-                        <div className="card-content">
-                            <a href="#book-now" className="book-btn">
+                        <div className="card-overlay" style={{ background: 'rgba(0, 0, 0, 0.2)' }}></div>
+                        <div className="card-content relative z-10">
+                            <a
+                                href="#book-now"
+                                className="bg-white/10 backdrop-blur-lg hover:bg-white/20 text-white border border-white/20 px-10 py-4 rounded-full text-xs font-bold uppercase tracking-[0.15em] transition-all transform hover:scale-105 active:scale-95 min-w-[200px] flex items-center justify-center shadow-2xl"
+                            >
                                 Book Now
                             </a>
                         </div>

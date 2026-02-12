@@ -5,13 +5,16 @@ const GradientCTA = () => {
         <div className="w-full py-16 md:py-24">
             <div className="max-w-[1380px] mx-auto px-5">
                 <div className="relative rounded-3xl overflow-hidden flex flex-col items-center justify-center text-center min-h-[350px] md:min-h-0 md:h-[400px] py-12 md:py-0">
-                    {/* Background Image */}
+                    {/* High-End Clinic Background Image */}
                     <div className="absolute inset-0">
                         <img
-                            src="/assets/image 29.svg"
-                            alt="Gradient Background"
+                            src="/assets/wellness_consultation_bg.png"
+                            alt="Wellness Consultation"
                             className="w-full h-full object-cover"
                         />
+                        {/* Dark Overlay for Text Readability */}
+                        <div className="absolute inset-0 bg-black/40"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                     </div>
 
                     {/* Content */}
@@ -20,16 +23,16 @@ const GradientCTA = () => {
                             Book a free consultation and start your wellness journey.
                         </h2>
 
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
                             <a
                                 href="#get-started"
-                                className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-3.5 rounded-full text-sm font-bold uppercase tracking-wider transition-all transform hover:scale-105 shadow-lg min-w-[180px]"
+                                className="bg-white hover:bg-[#fcfaf2] text-[#75714B] px-10 py-4 rounded-full text-xs font-bold uppercase tracking-[0.15em] transition-all transform hover:scale-105 shadow-xl min-w-[200px] flex items-center justify-center"
                             >
                                 Get Started
                             </a>
                             <a
                                 href="/quiz"
-                                className="bg-transparent hover:bg-white/10 text-white border-2 border-white px-8 py-3.5 rounded-full text-sm font-bold uppercase tracking-wider transition-all transform hover:scale-105 min-w-[180px]"
+                                className="bg-white/10 backdrop-blur-lg hover:bg-white/20 text-white border border-white/20 px-10 py-4 rounded-full text-xs font-bold uppercase tracking-[0.15em] transition-all transform hover:scale-105 min-w-[200px] flex items-center justify-center"
                             >
                                 Find Your Peptide
                             </a>

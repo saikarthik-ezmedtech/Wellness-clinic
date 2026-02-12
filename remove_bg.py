@@ -27,7 +27,9 @@ images = [
     "regenmd_weightloss.png",
     "regenmd_antiaging.png",
     "regenmd_strength.png",
-    "regenmd_brainhealth.png"
+    "regenmd_brainhealth.png",
+    "wecare_strength_syringe.png",
+    "wecare_anti_aging_vial.png"
 ]
 
 for img_name in images:
